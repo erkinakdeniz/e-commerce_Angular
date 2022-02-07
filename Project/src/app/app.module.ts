@@ -20,6 +20,14 @@ import { AlertComponent } from './shared/alert/alert.component';
 import { ApplicationErrorComponent } from './shared/application-error/application-error.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { ResourceNotFoundComponent } from './shared/resource-not-found/resource-not-found.component';
+import { FooterComponent } from './components/home/components/footer/footer.component';
+import { HeaderComponent } from './components/home/components/header/header.component';
+import { SidebarComponent } from './components/home/components/sidebar/sidebar.component';
+import { TopHeaderComponent } from './components/home/components/header/top-header/top-header.component';
+import { NewArrivalsComponent } from './components/home/components/new-arrivals/new-arrivals.component';
+import { ShowcaseComponent } from './components/home/components/showcase/showcase.component';
+import { BrandBannerComponent } from './components/home/components/banners/brand-banner/brand-banner.component';
+import { CarouselComponent } from './components/home/components/carousels/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +48,15 @@ import { ResourceNotFoundComponent } from './shared/resource-not-found/resource-
     AlertComponent,
     ApplicationErrorComponent,
     PageNotFoundComponent,
-    ResourceNotFoundComponent
+    ResourceNotFoundComponent,
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent,
+    TopHeaderComponent,
+    NewArrivalsComponent,
+    ShowcaseComponent,
+    BrandBannerComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
