@@ -28,7 +28,8 @@ import { NewArrivalsComponent } from './components/home/components/new-arrivals/
 import { ShowcaseComponent } from './components/home/components/showcase/showcase.component';
 import { BrandBannerComponent } from './components/home/components/banners/brand-banner/brand-banner.component';
 import { CarouselComponent } from './components/home/components/carousels/carousel/carousel.component';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorService } from './services/auth/token-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,9 +61,16 @@ import { CarouselComponent } from './components/home/components/carousels/carous
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptorService,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
