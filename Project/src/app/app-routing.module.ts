@@ -4,8 +4,9 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 
 const routes: Routes = [
-  {path:"",pathMatch:"full",component:HomeComponent},
-  {path:"products",component:ProductListComponent}];
+  {path:'',pathMatch:'full',component:HomeComponent},
+  {path:"products",component:ProductListComponent},
+  {path:"**",component:HomeComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
