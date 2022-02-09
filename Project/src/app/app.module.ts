@@ -25,11 +25,14 @@ import { HeaderComponent } from './components/home/components/header/header.comp
 import { SidebarComponent } from './components/home/components/sidebar/sidebar.component';
 import { TopHeaderComponent } from './components/home/components/header/top-header/top-header.component';
 import { NewArrivalsComponent } from './components/home/components/new-arrivals/new-arrivals.component';
-import { ShowcaseComponent } from './components/home/components/showcase/showcase.component';
 import { BrandBannerComponent } from './components/home/components/banners/brand-banner/brand-banner.component';
 import { CarouselComponent } from './components/home/components/carousels/carousel/carousel.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from './services/auth/token-interceptor.service';
+import { DeliveryComponent } from './components/home/components/banners/delivery/delivery.component';
+import { ShowroomComponent } from './components/home/components/showroom/showroom.component';
+import { MiddleBannerComponent } from './components/home/components/banners/middle-banner/middle-banner.component';
+import { BestsellerComponent } from './components/home/components/bestseller/bestseller.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,9 +58,12 @@ import { TokenInterceptorService } from './services/auth/token-interceptor.servi
     SidebarComponent,
     TopHeaderComponent,
     NewArrivalsComponent,
-    ShowcaseComponent,
     BrandBannerComponent,
-    CarouselComponent
+    CarouselComponent,
+    DeliveryComponent,
+    ShowroomComponent,
+    MiddleBannerComponent,
+    BestsellerComponent
   ],
   imports: [
     BrowserModule,
