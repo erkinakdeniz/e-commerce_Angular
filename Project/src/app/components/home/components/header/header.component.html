@@ -102,7 +102,7 @@
         <!-- logo -->
         <div class="col-sm-2 col-md-2 d-flex align-items-center">
           <div id="logo">
-            <a [routerLink]="['/']">
+            <a [routerLink]="['']">
               <img class="img-fluid" src="assets/img/home/logo.png" alt="logo" />
             </a>
           </div>
@@ -119,9 +119,11 @@
                 <div class="dropdown-menu">
                   <ul>
                     <li class="item font-italic">
-                      <a [routerLink]="['/products']" title="Home Page 1">Ürünler</a>
+                      <a [routerLink]="['/products']" title="Ürünler">Ürünler</a>
                     </li>
-
+                    <li class="item font-italic">
+                      <a [routerLink]="['/detail']" title="Ürün Datayı">Ürün Detayı</a>
+                    </li>
                   </ul>
                 </div>
               </li>
