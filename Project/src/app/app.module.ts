@@ -33,6 +33,7 @@ import { DeliveryComponent } from './components/home/components/banners/delivery
 import { ShowroomComponent } from './components/home/components/showroom/showroom.component';
 import { MiddleBannerComponent } from './components/home/components/banners/middle-banner/middle-banner.component';
 import { BestsellerComponent } from './components/home/components/bestseller/bestseller.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +64,8 @@ import { BestsellerComponent } from './components/home/components/bestseller/bes
     DeliveryComponent,
     ShowroomComponent,
     MiddleBannerComponent,
-    BestsellerComponent
+    BestsellerComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

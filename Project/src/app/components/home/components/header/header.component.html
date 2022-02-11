@@ -102,7 +102,7 @@
         <!-- logo -->
         <div class="col-sm-2 col-md-2 d-flex align-items-center">
           <div id="logo">
-            <a [routerLink]="['']">
+            <a href="http://localhost:4200">
               <img class="img-fluid" src="assets/img/home/logo.png" alt="logo" />
             </a>
           </div>
@@ -123,6 +123,9 @@
                     </li>
                     <li class="item font-italic">
                       <a [routerLink]="['/detail']" title="Ürün Datayı">Ürün Detayı</a>
+                    </li>
+                    <li class="item font-italic">
+                      <a [routerLink]="['/about']" title="Hakkımızda">Hakkımızda</a>
                     </li>
                   </ul>
                 </div>
@@ -277,7 +280,7 @@
                 <div>
                   <a
                     class="login"
-                    href="user-acount.html"
+                    [routerLink]="['/profile']"
                     rel="nofollow"
                     title="Log in to your customer account"
                   >
@@ -288,7 +291,7 @@
                 <div>
                   <a
                     class="login"
-                    href="user-login.html"
+                    [routerLink]="['/login']"
                     rel="nofollow"
                     title="Log in to your customer account"
                   >
@@ -299,7 +302,7 @@
                 <div>
                   <a
                     class="register"
-                    href="user-register.html"
+                    [routerLink]="['/register']"
                     rel="nofollow"
                     title="Register Account"
                   >
