@@ -97,7 +97,7 @@
 
   <!-- header desktop -->
   <div class="header-top d-xs-none">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <!-- logo -->
         <div class="col-sm-2 col-md-2 d-flex align-items-center">
@@ -119,7 +119,7 @@
                 <div class="dropdown-menu" *ngIf="menu.altbaslik">
                   <ul>
                     <li class="item font-italic" *ngFor="let altmenu of menu.altbaslik">
-                      <a [routerLink]="[altmenu.link]" title="{{altmenu.baslik}}">{{altmenu.baslik}}</a>
+                      <a [routerLink]="[altmenu.link]" title="{{altmenu.baslik}}" (click)="emitChild()">{{altmenu.baslik}}</a>
                     </li>
                   </ul>
                 </div>

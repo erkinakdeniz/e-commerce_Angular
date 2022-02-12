@@ -3,19 +3,9 @@
         <div class="container no-index">
           <div class="breadcrumb">
             <ol>
-              <li>
+              <li *ngIf="let b of breadcrumb">
                 <a href="#">
-                  <span>Home</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Select Page</span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span>Select Page 2</span>
+                  <span>{{b}}</span>
                 </a>
               </li>
             </ol>

@@ -6,7 +6,7 @@
         <div id="main">
           <div class="page-home">
             <!-- breadcrumb -->
-           <app-breadcrumb></app-breadcrumb>
+           <app-breadcrumb [parentToChildData]="parentData" (msgEvent)="receiveValue($event)"></app-breadcrumb>
 
             <div class="container">
               <div class="content">

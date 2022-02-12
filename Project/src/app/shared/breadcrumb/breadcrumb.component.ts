@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -8,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class BreadcrumbComponent implements OnInit {
 
   constructor() { }
-
+  parentdata="ads";
+  childtoparentdata!:string;
+  @Input() parentToChildData!:string;
   ngOnInit(): void {
+    this.addbc();
   }
+addbc(){
 
+}
+receiveValue($event:string): void{
+this.childtoparentdata=$event;
+}
 }
