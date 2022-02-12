@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,13 @@ import { ShowroomComponent } from './components/home/components/showroom/showroo
 import { MiddleBannerComponent } from './components/home/components/banners/middle-banner/middle-banner.component';
 import { BestsellerComponent } from './components/home/components/bestseller/bestseller.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+import { BestsellerSidebarComponent } from './components/home/components/bestseller/bestseller-sidebar/bestseller-sidebar.component';
+import { TagComponent } from './shared/tag/tag.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ToastrModule } from 'ngx-toastr';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,12 +73,21 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     ShowroomComponent,
     MiddleBannerComponent,
     BestsellerComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    BreadcrumbComponent,
+    BestsellerSidebarComponent,
+    TagComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({progressBar:true,closeButton:true,timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,})
+
   ],
   providers: [
     {
