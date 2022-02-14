@@ -12,17 +12,18 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProfileComponent } from './components/profile/profile.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
+
+
 const routes: Routes = [
-  {path:'',pathMatch:'full',component:HomeComponent},
-  {path:"products",component:ProductListComponent},
-  {path:'detail',component:ProductDetailsComponent},
-  {path:'about',component:AboutUsComponent},
-  {path:'contact',component:ContactComponent},
-  {path:'profile',component:ProfileComponent},
+  {path:'',pathMatch:'full',component:HomeComponent,data:{breadcrumb:'Home'}},
+  {path:"products",data:{breadcrumb:'Products'},children:[{path:'',component:ProductListComponent,data:{breadcrumb:'Products'}},{path:'detail',component:ProductDetailsComponent,data:{breadcrumb:'Detail'}}]},
+  {path:'about',component:AboutUsComponent,data:{breadcrumb:'About'}},
+  {path:'contact',component:ContactComponent,data:{breadcrumb:'Contact'}},
+  {path:'profile',component:ProfileComponent,data:{breadcrumb:'Profile'}},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path:'cart',component:CartComponent},
-  {path:'checkout',component:CheckoutComponent},
+  {path:'cart',component:CartComponent,data:{breadcrumb:'Cart'}},
+  {path:'checkout',component:CheckoutComponent,data:{breadcrumb:'CheckOut'}},
   {path:"**",component:PageNotFoundComponent}];
 
 @NgModule({

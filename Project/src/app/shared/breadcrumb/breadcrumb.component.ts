@@ -1,23 +1,20 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component,OnInit} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-breadcrumb',
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.css']
 })
-export class BreadcrumbComponent implements OnInit {
+export class BreadcrumbComponent implements OnInit,AfterViewInit {
 
-  constructor() { }
-  parentdata="ads";
-  childtoparentdata!:string;
-  @Input() parentToChildData!:string;
-  ngOnInit(): void {
-    this.addbc();
+  constructor(private route: ActivatedRoute) { }
+  ngAfterViewInit(): void {
   }
-addbc(){
 
-}
-receiveValue($event:string): void{
-this.childtoparentdata=$event;
-}
+  ngOnInit(): void {
+
+  }
+
+
 }

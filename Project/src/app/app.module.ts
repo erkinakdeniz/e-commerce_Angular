@@ -41,6 +41,7 @@ import { TagComponent } from './shared/tag/tag.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ToastrModule } from 'ngx-toastr';
 
+import {BreadcrumbModule} from 'angular-crumbs';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     ToastrModule.forRoot({progressBar:true,closeButton:true,timeOut: 10000,
       positionClass: 'toast-bottom-right',
-      preventDuplicates: true,})
+      preventDuplicates: true,}),
+      BreadcrumbModule
 
   ],
   providers: [

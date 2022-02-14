@@ -1,14 +1,15 @@
       <!-- breadcrumb -->
-      <nav class="breadcrumb-bg">
-        <div class="container no-index">
-          <div class="breadcrumb">
-            <ol>
-              <li *ngIf="let b of breadcrumb">
-                <a href="#">
-                  <span>{{b}}</span>
-                </a>
-              </li>
+      <breadcrumb #parent>
+        <nav class="breadcrumb-bg">
+          <div class="container no-index">
+            <ol class="breadcrumb">
+              <ng-template ngFor let-route [ngForOf]="parent.breadcrumbs">
+                <li *ngIf="!route.terminal" class="breadcrumb-item">
+                  <a [routerLink]="[route.url]">{{ route.displayName }}</a>
+                </li>
+                <li *ngIf="route.terminal" class="breadcrumb-item active" aria-current="page">{{ route.displayName }}</li>
+              </ng-template>
             </ol>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </breadcrumb>

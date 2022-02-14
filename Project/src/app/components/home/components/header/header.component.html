@@ -115,11 +115,11 @@
           <div class="menu navbar collapse navbar-collapse">
             <ul class="menu-top navbar-nav">
               <li  *ngFor="let menu of navMenu">
-                <a [routerLink]="[menu.link]" class="parent">{{menu.baslik}}</a>
+                <a [routerLink]='[menu.link]' class="parent">{{menu.baslik}}</a>
                 <div class="dropdown-menu" *ngIf="menu.altbaslik">
                   <ul>
                     <li class="item font-italic" *ngFor="let altmenu of menu.altbaslik">
-                      <a [routerLink]="[altmenu.link]" title="{{altmenu.baslik}}" (click)="emitChild()">{{altmenu.baslik}}</a>
+                      <a [routerLink]='[altmenu.link]' title="{{altmenu.baslik}}" >{{altmenu.baslik}}</a>
                     </li>
                   </ul>
                 </div>
